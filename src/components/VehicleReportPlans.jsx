@@ -117,7 +117,7 @@ import { usePlan } from '@/context/PlanContext';
 const plans = [
   {
     title: 'Basic',
-    price: '$30.99',
+    price: 30.99, // ✅ Number me rakha
     duration: 'Delivered within 12 to 24 hours',
     features: [
       'Vehicle Overview',
@@ -136,7 +136,7 @@ const plans = [
   },
   {
     title: 'Standard',
-    price: '$60.99',
+    price: 60.99,
     duration: 'Delivered within 10 to 12 hours',
     features: [
       'All Basic Features',
@@ -159,7 +159,7 @@ const plans = [
   },
   {
     title: 'Premium',
-    price: '$90.99',
+    price: 90.99,
     duration: 'Delivered within 6 to 8 hours',
     features: [
       'All Standard Features',
@@ -181,6 +181,7 @@ const plans = [
     ],
   },
 ];
+
 const VehicleReportPlans = () => {
   const { setSelectedPlan } = usePlan();
 
@@ -189,7 +190,8 @@ const VehicleReportPlans = () => {
   }, []);
 
   const handleSelectPlan = (plan) => {
-    setSelectedPlan(plan);
+    setSelectedPlan(plan); // ✅ Context me save
+    localStorage.setItem("selectedPlan", JSON.stringify(plan)); // ✅ LocalStorage me bhi save
   };
 
   return (
@@ -204,7 +206,7 @@ const VehicleReportPlans = () => {
             >
               <h3 className="text-xl font-bold text-gray-800 mb-2">{plan.title}</h3>
               <p className="text-2xl font-semibold text-red-600">
-                {plan.price}{' '}
+                ${plan.price}{' '}
                 <span className="text-base font-normal text-gray-700">/ per Report</span>
               </p>
               <p className="text-sm text-gray-700 mt-1 mb-4">{plan.duration}</p>

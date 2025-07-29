@@ -7,9 +7,10 @@ export const usePlan = () => useContext(PlanContext);
 
 export const PlanProvider = ({ children }) => {
   const [selectedPlan, setSelectedPlan] = useState(null);
+  const [paymentInfo, setPaymentInfo] = useState(null)
 
   return (
-    <PlanContext.Provider value={{ selectedPlan, setSelectedPlan }}>
+    <PlanContext.Provider value={{ selectedPlan, setSelectedPlan,paymentInfo,  setPaymentInfo }}>
       {children}
     </PlanContext.Provider>
   );
