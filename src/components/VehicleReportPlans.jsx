@@ -116,9 +116,10 @@ import { usePlan } from '@/context/PlanContext';
 
 const plans = [
   {
-    title: 'Basic',
-    price: 30.99, // ✅ Number me rakha
-    duration: 'Delivered within 12 to 24 hours',
+    title: 'Quick Check Report',
+    // duration: '4 hours',
+    price: 39.97,
+    duration: 'Delivered within 4 hours',
     features: [
       'Vehicle Overview',
       'Market Value',
@@ -135,9 +136,10 @@ const plans = [
     ],
   },
   {
-    title: 'Standard',
-    price: 60.99,
-    duration: 'Delivered within 10 to 12 hours',
+    title: 'Complete History Report',
+    price: 74.97,
+    // duration: '6 hours',
+    duration: 'Delivered within 6  hours',
     features: [
       'All Basic Features',
       'HQ Car Images',
@@ -158,9 +160,10 @@ const plans = [
     ],
   },
   {
-    title: 'Premium',
+    title: 'Max Secure Report',
     price: 90.99,
-    duration: 'Delivered within 6 to 8 hours',
+    // duration: '9 hours',
+    duration: 'Delivered within 9 hours',
     features: [
       'All Standard Features',
       'Buy One Get Another Report Free for Lifetime',

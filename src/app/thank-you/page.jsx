@@ -9,7 +9,7 @@ export default function ThankYouPage() {
   // Fallback to localStorage if context is empty (on refresh)
   useEffect(() => {
     if (!contextPaymentInfo) {
-      const localData = localStorage.getItem("paymentInfo");
+      const localData = localStorage.getItem("lastPayment");
       if (localData) {
         setPaymentInfo(JSON.parse(localData));
       }
@@ -33,7 +33,7 @@ export default function ThankYouPage() {
       <div className="bg-white shadow-lg p-6 rounded-lg w-full max-w-md">
         <p><strong>Name:</strong> {paymentInfo.user.name}</p>
         <p><strong>Email:</strong> {paymentInfo.user.email}</p>
-        <p><strong>Plan:</strong> {paymentInfo.plan.title}</p>
+        <p><strong>Plan:</strong> {paymentInfo.planName}</p>
         <p>
           <strong>Amount:</strong> ${paymentInfo.amount}{" "}
           {paymentInfo.currency.toUpperCase()}
