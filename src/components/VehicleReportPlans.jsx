@@ -118,7 +118,7 @@ const plans = [
   {
     title: 'Quick Check Report',
     // duration: '4 hours',
-    price: "$39.95",
+    price: 39.95,
     duration: 'Delivered within 4 hours',
     features: [
       'Vehicle Overview',
@@ -137,7 +137,7 @@ const plans = [
   },
   {
     title: 'Complete History Report',
-    price: "$74.95",
+    price: 74.95,
     // duration: '6 hours',
     duration: 'Delivered within 6  hours',
     features: [
@@ -161,7 +161,7 @@ const plans = [
   },
   {
     title: 'Max Secure Report',
-    price: "$129.95",
+    price: 129.95,
     // duration: '9 hours',
     duration: 'Delivered within 9 hours',
     features: [
@@ -209,7 +209,7 @@ const VehicleReportPlans = () => {
             >
               <h3 className="text-xl font-bold text-gray-800 mb-2">{plan.title}</h3>
               <p className="text-2xl font-semibold text-red-600">
-                {plan.price}{' '}
+                ${plan.price}{' '}
                 <span className="text-base font-normal text-gray-700">/ per Report</span>
               </p>
               <p className="text-sm text-gray-700 mt-1 mb-4">{plan.duration}</p>

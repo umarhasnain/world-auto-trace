@@ -176,7 +176,9 @@ function CustomStripeForm() {
     if (error) {
       alert(`❌ Payment failed: ${error.message}`);
     } else if (paymentIntent.status === "succeeded") {
-      alert(`✅ Payment of $${form.amount} successful!`);
+      toast.success(`✅ Payment of $${form.amount} successful!`);
+
+      // alert(`✅ Payment of $${form.amount} successful!`);
 
       // 🟢 Save payment data to localStorage
       localStorage.setItem(
@@ -213,7 +215,7 @@ function CustomStripeForm() {
         className="border p-2 w-full rounded"
       />
 
-      <p className="font-bold">Paying: ${form.amount}</p>
+      <p className="font-bold">Paying: {`$${form.amount}`}</p>
 
       <CardElement
         options={{
