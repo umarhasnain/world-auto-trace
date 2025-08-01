@@ -181,7 +181,7 @@ function CustomStripeForm() {
       if (error) {
         toast.error(`❌ ${error.message}`);
       } else if (paymentIntent.status === "succeeded") {
-        toast.success(`✅ Payment of $${form.amount} successful!`);
+        toast.success(`Payment of $${form.amount} successful!`);
         localStorage.setItem(
           "lastPayment",
           JSON.stringify({

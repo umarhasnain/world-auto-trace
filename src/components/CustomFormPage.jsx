@@ -93,7 +93,7 @@ export default function CustomFormPage() {
         body: JSON.stringify(finalData),
       });
 
-      toast.success("✅ Payment Successfull");
+      toast.success("Payment Successfull");
       setLoading(false);
       router.push("/stripe-payment");
     } catch (error) {
